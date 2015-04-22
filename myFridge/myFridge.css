@@ -13,3 +13,31 @@
   float: right;
   width: 37%;
 }
+.box {
+  background-color: #F3F3F3;
+  border: 1px solid gray;
+  margin-top: 15px;
+}
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.product-image {
+  max-height: 100px;
+}
+#supermarket {
+  min-height: 100px;
+}
+#fridge {
+  position: relative;
+}
+#fridge ul {
+  position: absolute;
+  padding-top: 10%;
+  padding-left: 10%;
+  top: 0;
+  left: 0;
+}
+li {
+  list-style: none;
+}
