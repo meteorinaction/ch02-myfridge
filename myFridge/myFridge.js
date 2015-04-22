@@ -39,6 +39,15 @@ if (Meteor.isClient) {
 
   });
 
+  Template.productListItem.onRendered(function () {
+    var templateInstance = this;
+
+    templateInstance.$('.draggable').draggable({
+      cursor: 'move',
+      helper: 'clone'
+    });
+  });
+
   Template.fridge.helpers({
     products: function () {
       return Products.find({
