@@ -1,6 +1,16 @@
 Products = new Mongo.Collection('products');
 
 if (Meteor.isClient) {
+  Template.fridge.onRendered(function () {
+    var templateInstance = this;
+
+    templateInstance.$('#fridge').droppable({
+      drop: function (evt, ui) {
+        // do something
+      }
+    });
+  });
+
   Template.fridge.helpers({
     products: function () {
       return Products.find({
