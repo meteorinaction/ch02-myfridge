@@ -3,12 +3,28 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  {{> container}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="container">
+  <div class="container">
+    <div class="left">
+      {{> fridge}}
+    </div>
+    <div class="right">
+      {{> productList}}
+    </div>
+  </div>
+</template>
+
+<template name="fridge">
+  <div id="fridge">
+    ...
+  </div>
+</template>
+
+<template name="productList">
+  <div id="supermarket" class="box">
+    ...
+  </div>
 </template>
