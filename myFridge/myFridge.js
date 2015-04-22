@@ -30,8 +30,20 @@ if (Meteor.isServer) {
     });
 
     Products.insert({
+      name: 'Juice',
+      img: '/juice.png',
+      place: 'fridge'
+    });
+
+    Products.insert({
       name: 'Bread',
       img: '/bread.png',
+      place: 'supermarket'
+    });
+
+    Products.insert({
+      name: 'Banana',
+      img: '/banana.png',
       place: 'supermarket'
     });
   });
