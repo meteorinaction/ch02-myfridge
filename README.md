@@ -1,5 +1,5 @@
 Chapter 2: My fridge! A reactive game
-=============================================
+=====================================
 
 Code Samples and Snippets for the book Meteor in Action
 
