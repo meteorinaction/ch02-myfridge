@@ -6,9 +6,18 @@ if (Meteor.isClient) {
 
     templateInstance.$('#fridge').droppable({
       drop: function (evt, ui) {
-        // do something
+        var query = {
+          _id: ui.draggable.data('id')
+        };
+        var changes = {
+          $set: {
+            place: 'fridge'
+          }
+        };
+        Products.update(query, changes);
       }
     });
+
   });
 
   Template.fridge.helpers({
