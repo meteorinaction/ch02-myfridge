@@ -20,6 +20,25 @@ if (Meteor.isClient) {
 
   });
 
+  Template.productList.onRendered(function () {
+    var templateInstance = this;
+
+    templateInstance.$('#supermarket').droppable({
+      drop: function (evt, ui) {
+        var query = {
+          _id: ui.draggable.data('id')
+        };
+        var changes = {
+          $set: {
+            place: 'supermarket'
+          }
+        };
+        Products.update(query, changes);
+      }
+    });
+
+  });
+
   Template.fridge.helpers({
     products: function () {
       return Products.find({
