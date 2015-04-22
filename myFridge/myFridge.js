@@ -8,6 +8,13 @@ if (Meteor.isClient) {
       });
     }
   });
+  Template.productList.helpers({
+    products: function () {
+      return Products.find({
+        place: 'supermarket'
+      });
+    }
+  });
 
 }
 
